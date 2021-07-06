@@ -1,0 +1,69 @@
+﻿.content {
+    width: 640px;
+    height: 640px;
+    margin: 100px auto;
+    position: relative;
+}
+/* 按钮公共样式 */
+.content .btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.3);
+    z-index: 2;
+}
+.content .btn button {
+    background: none;
+    border: none;
+    outline: none;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+/* 开始按钮 */
+.content .startBtn button {
+    width: 200px;
+    height: 150px;
+    background-image: url(../images/startGame.png);
+    margin-left: -100px;
+    margin-top: -75px;
+}
+/* 暂停按钮 */
+.content .pauseBtn button {
+    width: 100px;
+    height: 80px;
+    background-image: url(../images/start.png);
+    margin-left: -50px;
+    margin-top: -40px;
+}
+.content .pauseBtn {
+    display: none;
+}
+/* 主体部分 */
+#snakeWrap {
+    width: 600px;
+    height: 600px;
+    background-color: #225675;
+    border: 20px solid #7dd9ff;
+    /* 后面加 */
+    position: relative;
+}
+#snakeWrap div {
+    width: 20px;
+    height: 20px;
+}
+#snakeWrap .snakeHead {
+    /* contain缩小图片来适应元素的尺寸（保持像素的长宽比） */
+    /* cover扩展图片来填满元素（保持像素的长宽比） */
+    background: url(../images/head.png) no-repeat 0 0/contain;
+}
+#snakeWrap .snakeBody {
+    background: url(../images/body.png) no-repeat 0 0/contain;
+}
+#snakeWrap .snakeFood {
+    background: url(../images/apple.png) no-repeat 0 0/contain;
+}
